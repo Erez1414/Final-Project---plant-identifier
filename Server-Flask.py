@@ -117,5 +117,5 @@ def handle_recognize_request():
 # api.add_resource(Search, "/search/<string:searchKey>")
 
 if __name__ == "__main__":
-    app.run(debug=False, host='0.0.0.0') # for connecting from WAN (dont
+    app.run()#debug=False, host='0.0.0.0') # for connecting from WAN (dont
     # forget to open ports on router!!!
