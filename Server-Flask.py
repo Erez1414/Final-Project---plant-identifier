@@ -52,6 +52,11 @@ def get_data_from_name(name):
             "soil": plant_info_to_send[3],
             "alarm": plant_info_to_send[4].replace(" ","")}
 
+@app.route('/')
+def index():
+   print('Request for index page received')
+   return {"bdika":"works"}
+
 
 @app.route('/search/<string:searchKey>', methods=['GET', 'POST'])
 def handle_search_request(searchKey):
@@ -115,6 +120,7 @@ def handle_recognize_request():
         return 'problem happened on server side'
 
 # api.add_resource(Search, "/search/<string:searchKey>")
+
 
 if __name__ == "__main__":
     app.run()#debug=False, host='0.0.0.0') # for connecting from WAN (dont
